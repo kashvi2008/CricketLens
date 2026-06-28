@@ -1,0 +1,187 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Team Analysis
+
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1>
+
+        📊 Team Analysis
+
+    </h1>
+
+    <p>
+
+        Analyze any IPL team's batting, bowling and overall strength.
+
+    </p>
+
+</section>
+
+<section class="search-section">
+
+    <form method="POST">
+
+        <select name="team" required>
+
+            <option value="">
+
+                Select Team
+
+            </option>
+
+            {% for team in teams %}
+
+            <option value="{{ team }}">
+
+                {{ team }}
+
+            </option>
+
+            {% endfor %}
+
+        </select>
+
+        <button type="submit">
+
+            Analyze Team
+
+        </button>
+
+    </form>
+
+</section>
+
+{% if result %}
+
+<section class="player-profile">
+
+    <h2>
+
+        {{ result.team }}
+
+    </h2>
+
+</section>
+
+<section class="stats-grid">
+
+    <div class="stat-card">
+
+        <h3>
+
+            🏏 Batting Rating
+
+        </h3>
+
+        <h2>
+
+            {{ result.batting }}
+
+        </h2>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h3>
+
+            🎯 Bowling Rating
+
+        </h3>
+
+        <h2>
+
+            {{ result.bowling }}
+
+        </h2>
+
+    </div>
+
+    <div class="stat-card">
+
+        <h3>
+
+            ⭐ Overall Rating
+
+        </h3>
+
+        <h2>
+
+            {{ result.overall }}
+
+        </h2>
+
+    </div>
+
+</section>
+
+<section class="analysis-grid">
+
+    <div class="analysis-card">
+
+        <h2>
+
+            💪 Team Strength
+
+        </h2>
+
+        <p>
+
+            {{ result.strength }}
+
+        </p>
+
+    </div>
+
+    <div class="analysis-card">
+
+        <h2>
+
+            ⚠ Weakness
+
+        </h2>
+
+        <p>
+
+            {{ result.weakness }}
+
+        </p>
+
+    </div>
+
+</section>
+
+<section class="prediction-card">
+
+    <h2>
+
+        📈 Team Summary
+
+    </h2>
+
+    <p>
+
+        {{ result.team }} has an overall rating of
+
+        <strong>
+
+            {{ result.overall }}
+
+        </strong>
+
+        based on historical batting and bowling performances.
+
+    </p>
+
+</section>
+
+{% endif %}
+
+{% endblock %}

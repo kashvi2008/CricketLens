@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+
+        {% block title %}
+
+        CricketLens
+
+        {% endblock %}
+
+    </title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <a href="/">
+
+            🏏 CricketLens
+
+        </a>
+
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="/">
+
+                    Home
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/player">
+
+                    Player Analysis
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/orange-cap">
+
+                    Orange Cap
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/purple-cap">
+
+                    Purple Cap
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/winner">
+
+                    IPL Winner
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="/team-analysis">
+
+                    Team Analysis
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>
+
+            CricketLens
+
+        </h3>
+
+        <p>
+
+            Smarter IPL Analytics.
+            Better Cricket Insights.
+
+        </p>
+
+        <div class="footer-links">
+
+            <a href="/">Home</a>
+
+            <a href="/player">Player</a>
+
+            <a href="/orange-cap">Orange Cap</a>
+
+            <a href="/purple-cap">Purple Cap</a>
+
+            <a href="/winner">Winner</a>
+
+            <a href="/team-analysis">Team Analysis</a>
+
+        </div>
+
+        <p class="copyright">
+
+            © 2026 CricketLens.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

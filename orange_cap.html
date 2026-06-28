@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block title %}
+Orange Cap Prediction
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <h1> Orange Cap Prediction</h1>
+
+    <p>
+        Predicted Top Run Scorers for the Upcoming IPL Season
+    </p>
+
+</section>
+
+<div class="leaderboard-container">
+
+    <div class="winner-card orange-card">
+
+        <span class="crown">
+            👑
+        </span>
+
+        <h2>Orange Cap Favourite</h2>
+
+        <h1>
+            {{ predictions[0].player }}
+        </h1>
+
+        <p>
+            {{ predictions[0].team }}
+        </p>
+
+        <div class="big-score">
+            {{ predictions[0].predicted_runs }}
+        </div>
+
+        <p>Predicted Runs</p>
+
+    </div>
+
+    <div class="leaderboard">
+
+        <h2>Top 10 Predictions</h2>
+
+        {% for player in predictions %}
+
+        <div class="leaderboard-row">
+
+            <div class="rank">
+
+                {% if loop.index == 1 %}
+                🥇
+                {% elif loop.index == 2 %}
+                🥈
+                {% elif loop.index == 3 %}
+                🥉
+                {% else %}
+                {{ loop.index }}
+                {% endif %}
+
+            </div>
+
+            <div class="player-info">
+
+                <h3>{{ player.player }}</h3>
+
+                <p>{{ player.team }}</p>
+
+            </div>
+
+            <div class="score">
+
+                {{ player.predicted_runs }} Runs
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock %}
