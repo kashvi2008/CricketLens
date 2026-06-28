@@ -3,26 +3,47 @@ Its a Flask-based web application that leverages Machine Learning and data analy
 
 ✨ Features
 🧑‍💻 Player Career Analysis
+
 Career statistics
+
 Strike rate
+
 Batting average
+
 Highest score
+
 50s & 100s
+
 Boundary percentage
+
 Peak season detection
+
 Career trend analysis
+
 Next season run prediction
+
 🟠 Orange Cap Prediction
+
 Machine Learning-based prediction of top run scorers
+
 Active player filtering
+
 Team information
+
 Ranked leaderboard
+
 🟣 Purple Cap Prediction
+
 Predicts highest wicket takers using Linear Regression
+
 Active bowler filtering
+
 Team information
+
 Ranked leaderboard
+
 🏆 IPL Winner Prediction
+
 Batting & bowling strength analysis
 AI-generated win probability
 Team ranking dashboard
