@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block title %}
+Home | CricketLens
+{% endblock %}
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <span class="hero-badge">
+            IPL Analytics Platform
+        </span>
+        <h1>
+            Smarter Cricket Analytics.
+            Better Predictions.
+        </h1>
+        <p>
+            Analyze player performances, compare teams, predict Orange Cap,
+            Purple Cap and the next IPL Champion using historical IPL data.
+        </p>
+        <div class="hero-buttons">
+            <a href="/player"
+               class="btn btn-primary">
+                Analyze Player
+            </a>
+            <a href="/winner"
+               class="btn btn-secondary">
+                View Predictions
+            </a>
+        </div>
+    </div>
+</section>
+<section class="features">
+    <div class="section-heading">
+        <h2>
+            Explore CricketLens
+        </h2>
+        <p>
+            Everything you need for IPL analytics in one place.
+        </p>
+    </div>
+    <div class="feature-grid">
+        <a href="/player"
+           class="feature-card">
+            <div class="feature-icon">🏏</div>
+            <h3>
+                Player Analysis
+            </h3>
+            <p>
+                Career statistics, trends, peak seasons and AI predictions.
+            </p>
+        </a>
+        <a href="/orange-cap"
+           class="feature-card">
+            <div class="feature-icon">🟠</div>
+            <h3>
+                Orange Cap
+            </h3>
+            <p>
+                Predict the highest run scorers for the upcoming IPL season.
+            </p>
+        </a>
+        <a href="/purple-cap"
+           class="feature-card">
+            <div class="feature-icon">🟣</div>
+            <h3>
+                Purple Cap
+            </h3>
+            <p>
+                Discover the predicted top wicket takers of the season.
+            </p>
+        </a>
+        <a href="/winner"
+           class="feature-card">
+            <div class="feature-icon">🏆</div>
+            <h3>
+                IPL Winner
+            </h3>
+            <p>
+                AI powered prediction of the strongest title contenders.
+            </p>
+        </a>
+        <a href="/team-analysis"
+           class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>
+                Team Analysis
+            </h3>
+            <p>
+                Compare batting, bowling and overall team performance.
+            </p>
+        </a>
+        <div class="feature-card">
+            <div class="feature-icon">📊</div>
+            <h3>
+                Performance Insights
+            </h3>
+            <p>
+                Historical trends, season comparison and future projections.
+            </p>
+        </div>
+    </div>
+</section>
+<section class="why-section">
+    <div class="section-heading">
+        <h2>
+            Why CricketLens?
+        </h2>
+    </div>
+    <div class="why-grid">
+        <div class="why-card">
+            ✔ AI Based Predictions
+        </div>
+        <div class="why-card">
+            ✔ Player Career Analytics
+        </div>
+        <div class="why-card">
+            ✔ Orange & Purple Cap Forecasts
+        </div>
+        <div class="why-card">
+            ✔ Team Performance Comparison
+        </div>
+        <div class="why-card">
+            ✔ IPL Winner Prediction
+        </div>
+        <div class="why-card">
+            ✔ Beautiful Interactive Dashboard
+        </div>
+    </div>
+</section>
+<section class="cta">
+    <h2>
+        Ready to Explore Cricket Analytics?
+    </h2>
+    <p>
+        Start exploring players, teams and AI powered IPL predictions.
+    </p>
+    <a href="/player"
+       class="btn btn-primary">
+        Get Started →
+    </a>
+</section>
+{% endblock %}
